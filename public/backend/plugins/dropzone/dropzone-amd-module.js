@@ -660,7 +660,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
           var trgRatio = width / height;
 
           if (info.srcWidth > width || info.srcHeight > height) {
-            // Image is bigger and needs rescaling
+            // ImageMul is bigger and needs rescaling
             if (resizeMethod === 'crop') {
               if (srcRatio > trgRatio) {
                 info.srcHeight = file.height;
@@ -1973,7 +1973,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
 
       fileReader.readAsDataURL(file);
     } // `mockFile` needs to have these attributes:
-    // 
+    //
     //     { name: 'name', size: 12345, imageUrl: '' }
     //
     // `callback` will be invoked when the image has been downloaded and displayed.
@@ -2007,7 +2007,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
     value: function createThumbnailFromUrl(file, width, height, resizeMethod, fixOrientation, callback, crossOrigin) {
       var _this14 = this;
 
-      // Not using `new Image` here because of a bug in latest Chrome versions.
+      // Not using `new ImageMul` here because of a bug in latest Chrome versions.
       // See https://github.com/enyo/dropzone/pull/226
       var img = document.createElement("img");
 

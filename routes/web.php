@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +34,7 @@ Route::group(['middleware' => 'checkLoggedIn'], function (){
     Route::get('/addEmployee', [EmployeeController::class, 'index'])->name('/addEmployee');
     Route::post('/insertEmployee', [EmployeeController::class, 'store'])->name('/insertEmployee');
     Route::get('/allEmployee', [EmployeeController::class, 'showEmployees'])->name('/allEmployee');
+    Route::get('/allProduct', [PostController::class, 'showProduct'])->name('/allProduct');
     Route::get('deleteEmployee/{id}', [EmployeeController::class, 'destroy']);
     Route::get('viewEmployee/{id}', [EmployeeController::class, 'viewEmployee']);
     Route::get('editEmployee/{id}', [EmployeeController::class, 'edit']);
@@ -49,7 +52,8 @@ Route::group(['middleware' => ['checkLoggedIn']], function () {
 
 
 });
-
+Route::get('upload',[ImageController::class,'upload']);
+Route::post('upload-image',[ImageController::class,'uploadImage']);
 
 
 

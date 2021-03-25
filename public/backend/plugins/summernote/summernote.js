@@ -1,14 +1,14 @@
 /*!
- * 
+ *
  * Super simple wysiwyg editor v0.8.18
  * https://summernote.org
- * 
- * 
+ *
+ *
  * Copyright 2013- Alan Hong. and other contributors
  * summernote may be freely distributed under the MIT license.
- * 
+ *
  * Date: 2020-05-20T16:47Z
- * 
+ *
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -248,7 +248,7 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.exten
     },
     image: {
       image: 'Picture',
-      insert: 'Insert Image',
+      insert: 'Insert ImageMul',
       resizeFull: 'Resize full',
       resizeHalf: 'Resize half',
       resizeQuarter: 'Resize quarter',
@@ -265,8 +265,8 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.exten
       selectFromFiles: 'Select from files',
       maximumFileSize: 'Maximum file size',
       maximumFileSizeError: 'Maximum file size exceeded.',
-      url: 'Image URL',
-      remove: 'Remove Image',
+      url: 'ImageMul URL',
+      remove: 'Remove ImageMul',
       original: 'Original'
     },
     video: {
@@ -6000,7 +6000,7 @@ var Editor_Editor = /*#__PURE__*/function () {
       var callbacks = this.options.callbacks; // If onImageUpload set,
 
       if (callbacks.onImageUpload) {
-        this.context.triggerEvent('image.upload', files); // else insert Image as dataURL
+        this.context.triggerEvent('image.upload', files); // else insert ImageMul as dataURL
       } else {
         this.insertImagesAsDataURL(files);
       }
@@ -7859,7 +7859,7 @@ var Buttons_Buttons = /*#__PURE__*/function () {
     value: function addImagePopoverButtons() {
       var _this3 = this;
 
-      // Image Size Buttons
+      // ImageMul Size Buttons
       this.context.memo('button.resizeFull', function () {
         return _this3.button({
           contents: '<span class="note-fontsize-10">100%</span>',
@@ -8787,7 +8787,7 @@ function ImagePopover_createClass(Constructor, protoProps, staticProps) { if (pr
 
 
 /**
- * Image popover module
+ * ImageMul popover module
  *  mouse events that show/hide popover will be handled by Handle.js.
  *  Handle.js will receive the events and invoke 'imagePopover.update'.
  */

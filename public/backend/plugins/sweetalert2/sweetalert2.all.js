@@ -1366,7 +1366,7 @@
 
     renderProgressSteps(instance, params); // Icon
 
-    renderIcon(instance, params); // Image
+    renderIcon(instance, params); // ImageMul
 
     renderImage(instance, params); // Title
 
