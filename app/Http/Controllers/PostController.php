@@ -11,4 +11,5 @@ class PostController extends Controller
         $post=Post::all();
         return view('admin_layouts.pages.allProduct',compact('post'));
     }
+
 }

@@ -66,7 +66,9 @@
                 "targets": [4,5],
                 "orderable": false
             }],
-            dom: 'Bfrtip',
+
+            dom: 'lBfrtip',
+            // dom: 'frtipB',
             buttons: [
                 {
                     extend: 'pdf',
@@ -98,7 +100,7 @@
     } );
 
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+{{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>--}}
 <script>
     $(function() {
         // Multiple images preview in browser
