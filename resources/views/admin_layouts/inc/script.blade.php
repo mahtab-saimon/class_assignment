@@ -73,20 +73,20 @@
                 {
                     extend: 'pdf',
                     exportOptions: {
-                        columns: [1,2]
+                        columns: [0,1,2]
                     }
                 },
                 {
                     extend: 'csv',
                     exportOptions: {
-                        columns: [1,2]
+                        columns: [0,1,2]
                     }
 
                 },
                 {
                     extend: 'excel',
                     exportOptions: {
-                        columns: [1,2]
+                        columns: [0,1,2]
                     }
                 }
             ]

@@ -30,7 +30,7 @@ class ProductController extends Controller
         $post->price=$request->price;
         $post->description=$request->description;
         $post->save();
-        }
+    }
 
 
     public function edit($id)
