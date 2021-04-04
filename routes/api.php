@@ -24,9 +24,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('product_list',[ProductController::class,'show']);
 Route::post('create', [ProductController::class, 'store']);
-Route::get('deletePost/{id}', [ProductController::class, 'destroy']);
-Route::get('editPost/{id}', [ProductController::class, 'edit']);
-Route::post('update-post/{id}', [ProductController::class, 'update']);
+Route::get('deleteProduct/{id}', [ProductController::class, 'destroy']);
+Route::get('editProduct/{id}', [ProductController::class, 'edit']);
+Route::post('update-product/{id}', [ProductController::class, 'update']);
 Route::post('dashboard', [LoginController::class, 'dashboard']);
 
 //category

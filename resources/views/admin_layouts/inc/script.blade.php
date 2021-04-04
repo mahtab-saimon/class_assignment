@@ -19,7 +19,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js" crossorigin="anonymous"></script>
 <script src="{{asset('backend/assets/demo/datatables-demo.js')}}"></script>
-<script>
+<!-- <script>
         @if(Session::has('messege'))
     var type="{{Session::get('alert-type','info')}}";
     switch(type){
@@ -37,8 +37,8 @@
             break;
     }
     @endif
-</script>
-<script>
+</script> -->
+<!-- <script>
     $(document).on("click", "#delete", function(e){
         e.preventDefault();
         var link = $(this).attr("href");
@@ -57,8 +57,42 @@
                 }
             });
     });
-</script>
+</script> -->
+
 <script>
+    $().ready(()=>{
+        $('#example1').dataTable({
+            "columnDefs": [{
+                "targets": [4,5],
+                "orderable": false
+            }],
+            dom: 'lBfrtip',
+        buttons: [
+            {
+                    extend: 'pdf',
+                    exportOptions: {
+                        columns: [0,1,2]
+                    }
+                },
+                {
+                    extend: 'csv',
+                    exportOptions: {
+                        columns: [0,1,2]
+                    }
+
+                },
+                {
+                    extend: 'excel',
+                    exportOptions: {
+                        columns: [0,1,2]
+                    }
+                }
+            
+        ]
+        })
+    })
+</script>
+<!-- <script>
 
     $(document).ready(function() {
         $('#example1').DataTable( {
@@ -99,7 +133,7 @@
         } );
     } );
 
-</script>
+</script> -->
 {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>--}}
 <script>
     $(function() {
